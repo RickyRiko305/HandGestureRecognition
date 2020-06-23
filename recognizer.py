@@ -54,13 +54,13 @@ def count(thresholded, segmented):
 if __name__ == "__main__":
 
     # load the structure of the model
-    json_file = open('F:/trainedModel-3.json', 'r')
+    json_file = open('F:/trainedModel-5.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
 
     # load weights into new model
-    loaded_model.load_weights("F:/modelWeights-3.h5")
+    loaded_model.load_weights("F:/modelWeights-5.h5")
     print("\n\n\n\nLoaded model from disk\n\n\n\n")
     loaded_model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
