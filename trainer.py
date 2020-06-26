@@ -131,7 +131,7 @@ def baseline_model():
 model = baseline_model()
 
 # Fit the model
-model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=10, batch_size=20, verbose=2)
+model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=2000, batch_size=20, verbose=2)
 
 # Final evaluation of the model
 scores = model.evaluate(x_test, y_test, verbose=0)
@@ -139,7 +139,7 @@ print("Baseline Error: %.2f%%" % (100-scores[1]*100))
 
 # Save the model
 model_json = model.to_json();
-with open("trainedModel-1.json","w") as jsonFile:
+with open("trainedModel-5.json","w") as jsonFile:
     jsonFile.write(model_json)
-model.save_weights("modelWeights-1.h5")
+model.save_weights("modelWeights-5.h5")
 print("Saved model to disk")
